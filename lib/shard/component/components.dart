@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget taskstyle(){
+Widget taskstyle( Map models){
   return Padding(
       padding: EdgeInsets.all(16),
       child: Row(
@@ -10,7 +10,7 @@ Widget taskstyle(){
           CircleAvatar(
             radius: 44,
             child: Text(
-              'task time ',
+              '${models['time']}',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
@@ -22,11 +22,12 @@ Widget taskstyle(){
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             
-            Text('task tittle',style: TextStyle(
+            Text('${models['title']}',
+            style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold
             ),),
-            Text('oct-4-6',
+            Text('${models['date']}',
             style: TextStyle(color: Colors.grey),)
             
           ],)
